@@ -11,11 +11,36 @@ body {
     padding: 20px;
 }
 
-.checkout {
-    width: 50%;
+.shopping-cart h2 {
+    padding-left: 15%;
 }
 
 .list {
     display: flex;
     justify-content: space-between;
+}
+
+.item1 img{
+    padding-left: 85%;
+    width: 100px;
+}
+
+.item2 {
+    width: 12%;
+}
+
+.checkout {
+    width: 50%;
+    display: flex;
+    padding: 20px;
+}
+
+.clear-cart {
+    text-align: center;
+    padding-top: 7%;
+}
+
+.continue-checkout form {
+    flex-direction: column;
+    padding: 30%;
 }

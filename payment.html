@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Payment.css" />
+    <title>Payment</title>
+</head>
+<body>
+        <div class="container">
+        <h6>Register</h6>
+        <span>x</span>
+        <h1>Payment</h1>
+        <div class="bawah">
+            <table border=0 cellpadding="10">
+                <label for="metode Pembayaran">Choose  a payment Method
+                <th class="A"><input type="checkbox"  value=""><img src="cod.jpg" width="100px" height="50px"></th>
+                <th><input type="checkbox"  value=""><img src="ovo.png" width="100px" height="50px"></th>
+                <th><input type="checkbox"  value=""><img src="dana.png" width="100px" height="50px"></th>
+              </tr>
+            </table>
+          </div>
+        <form action = "">
+            <label for="Country">Country
+                <select name="Country" id="Country">
+                    <option value="Country">Indonesia</option>
+                    <option value="Country">Malaysia</option>
+                    <option value="Country">Singapura</option>
+                    <option value="Country">Vietnam</option>
+                    <option value="Country">Philipin</option>
+                </select>
+            </label>
+
+            <label for="alamat">Residence Address
+                <input type="text" name="alamat" id="alamat" onkeypress="rumah" aria-multiselectable="false"() />
+            </label>
+
+            <div class="float">
+            <label for="alasan"> ID Number DANA/OVO
+                <input type="text" name="alasan" id="alasan" maxlength="12" onkeypress="phone" () />
+            </label>
+
+            <label for="akun"> Account name
+                <input type="text" name="akun" id="akun" onkeypress="punya" aria-multiselectable="false"() />
+            </label>
+            </div>
+            <label for="checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <p>Payment Address is the same as the Delivery Address</p>
+            </label>
+
+            <button class="btn-form-pay">Pay</button>
+            <button class="btn-form-change" id="myBtn">change</button>
+
+        </form>
+    </div>
+<script src="payment.js"></script>
+   
+
+</body>
+</html>

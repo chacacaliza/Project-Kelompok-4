@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script language="JavaScript" type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
@@ -15,41 +17,114 @@
       <h2>My Cart</h2>
       <div class="list">
         <div class="item1"><img src="apel.jpg"></div>
-        <div class="item2">Lorem ipsum dolor sit amet consectetur adipisicing eli reprehenderit aliquam</div>
+        <div class="item2">
+          <p>loremipsum</p>
+          <p>002</p>
+        </div>
         <div class="item3">
-          <button class="btn-min"><strong>-</strong></button>
-          <button class="btn-plus"><strong>+</strong></button>
+	        <input data-value type="number" value="1" min="1"/>
         </div>
         <div class="item4">15.000</div>
+        <div class="item5">
+          <button id="btn-checkout">Checkout</button>
+          <button>Remove</button>
+        </div>
       </div>
       <div class="list">
         <div class="item1"><img src="terong.jpg"></div>
-        <div class="item2">Lorem ipsum dolor sit amet consectetur adipisicing eli reprehenderit aliquam</div>
+        <div class="item2">
+          <p>loremipsum</p>
+          <p>002</p>
+        </div>
         <div class="item3">
-          <button class="btn-min"><strong>-</strong></button>
-          <button class="btn-plus"><strong>+</strong></button>
+          <input data-value type="number" value="1" min="1"/>
         </div>
         <div class="item4">5.000</div>
+        <div class="item5">
+          <button id="btn-checkout">Checkout</button>
+          <button>Remove</button>
+        </div>
       </div>
-      <div class="clear-cart">
-        <button>clear cart</button>
+      <div class="col-25">
+        <div class="container2">
+          <h4>Cart
+            <span class="price" style="color:black">
+              <i class="fa fa-shopping-cart"></i>
+              <b>2</b>
+            </span>
+          </h4>
+          <p><a>Product 1</a> <span class="price">IDR 15,000</span></p>
+          <p><a>Product 2</a> <span class="price">IDR 5,000</span></p>
+          <hr>
+          <p>Total <span class="price" style="color:black"><b>IDR 20,000</b></span></p>
+        </div>
       </div>
     </div>
     <div class="checkout">
-      <div class="shipping">
-        <p>Shipping charge : 0</p>
+      <div class="row">
+        <div class="col-75">
+          <div class="billing-address">
+            <form action="/action_page.php">
+      
+              <div class="row">
+                <div class="col-25">
+                  <h3>Billing Address</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text" id="email" name="email" placeholder="john@example.com">
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+                  <input type="text" id="city" name="city" placeholder="Jakarta">
+      
+                  <!-- <div class="row">
+                    <div class="col-50">
+                      <label for="state">State</label>
+                      <input type="text" id="state" name="state" placeholder="NY">
+                    </div>
+                    <div class="col-50">
+                      <label for="zip">Zip</label>
+                      <input type="text" id="zip" name="zip" placeholder="10001">
+                    </div>
+                  </div>
+                </div> -->
+      
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+              </label>
+              <input type="submit" value="Continue to checkout" class="btn">
+            </form>
+          </div>
+        </div>
+      
+        
       </div>
-      <div class="continue-checkout">
-        <form action="">
-            <label for="fname">Complite Address:</label><br>
-            <input type="text" id="address" name="address"><br>
-            <label for="lname">Phone Number:</label><br>
-            <input type="text" id="phone-number" name="phone-number"><br>
-            <input type="submit" value="procced to checkout">
-        </form>
-      </div>
-    </div>
   </div>
+
+  <div> NO DATA </div>
+  <script>
+    var tbl = document.getElementById('myTable');
+    var norows = document.getElementById('no-rows-alert');
+    document.getElementById('myButton').addEventListener('click', function() {
+     var produk = []
+        if (produk.length > 0) {
+        row.style.display = 'table-row';
+        }
+      else {
+        row.style.display = 'none';
+      }
+      }
+      
+      norows.style.display = produk.length > 0 ? 'none' : 'inherit';
+      if (!matchedRow) {
+        setTimeout(function() {
+          norows.style.display = 'none'
+        }, 1500)
+      }
+    );
+    </script>
 </body>
 
 </html>

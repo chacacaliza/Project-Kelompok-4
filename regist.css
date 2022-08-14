@@ -10,9 +10,9 @@ body{
     margin: 0px;
     margin-bottom: 40px;
     padding: 20px;
-    background-color: #2E3136;
+    background-color: #414144;
     padding-top: 50px;
-    border-bottom: 2px solid rgb(227, 126, 10);
+    border-bottom: 2px solid rgb(212, 122, 20);
 }
 .head{
     margin: 0px;
@@ -177,7 +177,7 @@ form{
     text-align: center;
     margin: 0px;
     color: rgb(189, 185, 185);
-    background-color: #22252A;
+    background-color: #414144;
     padding-top: 20px;
 }
 @media only screen and (max-width: 600px) {

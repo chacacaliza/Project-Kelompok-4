@@ -1,62 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cart.css">
-    <title>checkout</title>
-</head>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lofty Food</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style2.css">
-</head>
+   
 
-<body> 
-            <div class="checkoutForm">
-                <p class="checkoutHeading">CHECKOUT</p>
-                <form action="JavaScript:void(0)" onsubmit="checkOut();">
-                    <label class="text">Full Name
-                        <br />
-                        <input type="fullname" class="input" placeholder="Full Name..." required="required" id="fullname" onfocus="this.className += ' inputfocus'"
-                            onblur="this.className='input'">
-                    </label>
-                    <br />
-                    <label class="text">Email
-                        <br />
-                        <input type="email" class="input" placeholder="Email..." required="required" id="email" onfocus="this.className += ' inputfocus'"
-                            onblur="this.className='input'">
-                    </label>
-                    <br />
-                    <label class="text">Address
-                        <br />
-                        <input type="address" class="input" placeholder="address..." required="required" id="address" onfocus="this.className += ' inputfocus'"
-                            onblur="this.className='input'">
-                    </label>
-                    <br />
-                    <label class="text">City
-                        <br />
-                        <input type="city" class="input" placeholder="city..." required="required" id="city" onfocus="this.className += ' inputfocus'"
-                            onblur="this.className='input'">
-                    </label>
-                    <br />
-                    <label class="agreement">
-                        <input type="checkbox" required="required"> Accept the terms and polices.</label>
-                    <br />
-                    <input type="submit" value="Continue" class="submitBtn">
-                </form>
-                <div id="display">
-                    <i class="fa fa-spinner"></i> Continue...</div>
-                <hr style="width:70%; opacity:0.5; size:0.5px"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> 
+     
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" />
+    
+</head>
+<body>
+
+   <section class="wrapper" style="background: #d0d0d0;">
+    <div class="container">
+          <div style="background: #59a1f3;margin: 10;padding: 5;overflow: hidden;">
+            <h2 class="heading" style="margin-bottom: 0;color: white;float: left;font-family: Century  Gothic;">
+                 CheckOut Page
+            </h2>
+            <div onclick="goToShop();" class="btn btn-warning" id="mycart" style=" margin-right:10px;font-weight:700;cursor:pointer;display:inline-block;float:right;margin-top: 10px;">
+                <span>Go To Shop</span>
             </div>
+            
         </div>
-       
+      
+<style>
+    .show{
+        visibility: visible;
+    }
+    
+    .hidden {
+        
+        display: none;
+    }
+    
+    thead{
+        background: #f5b761;
+color: white;
+font-size: 25px;
+    }
+    
+    .table{
+        border: solid black 2px;
+    }
+</style>
+<div class=" alert alert-success hidden" id="cartAdded" role="alert">
+  <strong>Product Added Successfully to the cart.</strong>
+</div>
+<div class="alert  alert-info hidden" id="cartUpdated" role="alert">
+  <strong>Product  already in cart. Quantity Updated.</strong>
+</div>
+
+<div class="alert alert-danger hidden" id="cartEmpty" role="alert">
+  <strong>Your Cart is Empty Now.</strong>
+</div>
+        
+        
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="myCartData" >
+                                     
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><h4>Total Order</h4></td>
+                        <td class="text-left"><h4 id="totalSum"></h4></td>
+                        
+                    </tr>
+                </tfoot>
+            </table>
+            <a href="Payment.html" class="btn btn-warning" style="margin-right:10px;font-weight:700;cursor:pointer;display:inline-block;float:right;margin-top: 10px;"><button>Payment Order</button> </a>
+        </div>
+ 
+
+      
     </div>
-    <script src="checkout.js"></script>
+</section>
+<script src="checkout.js"></script>    
+    <script type="text/javascript">
+     
+   
+        //retrieveCart();
+        
+
+    </script>
 </body>
 </html>

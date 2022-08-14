@@ -65,5 +65,5 @@ function Confirmation() {
 
     document.getElementById("cardnumber").innerHTML = one;
     document.getElementById("cardname").innerHTML = two;
-    document.getElementById("cardaddress").innerHTML = two;
+    document.getElementById("cardaddress").innerHTML = three;
 }

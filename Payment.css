@@ -1,0 +1,69 @@
+body {
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+
+
+.form-control:focus {
+    box-shadow: none;
+    border: 2px solid;
+    border-color: #266cee;
+}
+
+img {
+    width: 80px;
+    height: 50px;
+    background-size: 100% 100%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.imgdiv img {
+    width: 50px;
+    height: 30px;
+    background-size: 100% 100%;
+}
+
+.imgdiv li {
+    color: red;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+
+.icons p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.Payment_Success {
+    background-color: aliceblue;
+    /* background: url(./images/memphis-mini.png); */
+}
+
+.offcanvas-header h5 {
+    font-size: 22px;
+}
+
+#close {
+    font-weight: bold;
+}
+
+.offcanvas-body h5 {
+    font-weight: 400;
+    font-size: 18px;
+    font-family: sans-serif;
+}

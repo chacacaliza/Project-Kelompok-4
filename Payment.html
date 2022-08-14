@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./fonts/css/all.css" type="text/css" media="all">
+    <link rel="stylesheet" href="Payment.css" type="text/css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mt-4">
+                <h3 class="text-center display-5" style="color: white;">Payment Method</h3>
+            </div>
+        </div>
+        
+            <div class="row mt-4">
+            <div class="col-lg-4 mx-auto border shadow p-4 mt-4 bg-light">
+                <div class="row">
+                    <div class="input-group mt-3 mb-4">
+                        <span class="input-group-text">Number</span>
+                        <input type="text" class="form-control" maxlength="19" id="number" onkeyup="CheckCardType()" placeholder="---- ---- ---- ----" aria-label="Amount">
+                        <span class="input-group-text">
+                            <div class="imgdiv" id="img"></div>
+                        </span>
+                    </div>
+                    <div class="input-group flex-nowrap mb-4">
+                        <span class="input-group-text" id="addon-wrapping">Name </span>
+                        <input type="text" class="form-control" placeholder="Purchaser Name" id="name" aria-label="Username" aria-describedby="addon-wrapping" >
+                    </div>
+
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping">Address</span>
+                        <input type="text" class="form-control" placeholder="Address" id="address" aria-label="address" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="col-lg-12">
+                        <span id="message1" class="mx-3 text-danger"></span>
+                    </div>
+                    <button class=" col-lg-4 btn btn-primary mx-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" onclick="Confirmation()">Pay</button>
+                    <div class="offcanvas offcanvas-top Payment_Success" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasTopLabel" class="text-success">PAYMENT SUCCESSFULL <i class="fas fa-check"></i></h5>
+                            <button type="button" id="close" class="btn-close text-reset border border-danger border-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body text-center">
+                            <h5>Number -- <span id="cardnumber" class="text-success"></span></h5>
+                            <h5>Purchaser name -- <span id="cardname" class="text-success"></span></h5>
+                            <h5>Address -- <span id="cardaddress" class="text-success"></span></h5>
+                            <a href="index.html" style="margin-right:10px;font-weight:700;cursor:pointer;display:inline-block; margin-top: 10px;"><button>Back to Home</button> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-lg-4 mx-auto">
+                <div class="row">
+                    <!-- <a href="home.html" style="margin-right:10px;font-weight:700;cursor:pointer;display:inline-block;margin-top: 10px;"><button>Back to Home</button> </a> -->
+                    <div class="col">
+                        <h3 class="text-center">Pay online with any method</h3>
+                    </div>
+                </div>
+                <div class="row mt-3 icons">
+                    <div class="col-lg-3">
+                        <img src="./images/ovo.png" alt="">
+                        <p>1234 **** **** **** </p>
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="./images/dana.png" alt="">
+                        <p>2345 **** **** ****</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="./images/cod.jpg" alt="">
+                        <p>3456 **** **** **** </p>
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="./images/bni.png" alt="">
+                        <p>4567 **** **** ****</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="Payment.js"></script>
+
+</body>
+
+</html>

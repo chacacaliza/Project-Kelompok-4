@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lofty Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="head">
+                <i></i> Lofty<span class="halfHead">Food<sup style="font-size:40%; color: white;"></sup>
+                </span>
+            </h1>
+            </div>  
+            <div class="signUpForm">
+                <p class="signUpHeading">SIGN UP</p>
+                <form action="JavaScript:void(0)" onsubmit="signUp();">
+                    <label class="text">Full Name
+                        <br />
+                        <input type="text" class="input" placeholder="Full Name..." required="required" id="fullName" onfocus="this.className += ' inputfocus'"
+                            onblur="this.className='input'">
+                    </label>
+                    <br />
+                    <label class="text">Email
+                        <br />
+                        <input type="email" class="input" placeholder="Email..." required="required" id="email" onfocus="this.className += ' inputfocus'"
+                            onblur="this.className='input'">
+                    </label>
+                    <br />
+                    <label class="text">Password
+                        <br />
+                        <input type="password" class="input" placeholder="Password..." required="required" id="password" onfocus="this.className += ' inputfocus'"
+                            onblur="this.className='input'">
+                    </label>
+                    <br />
+                    <label class="agreement">
+                        <input type="checkbox" required="required"> Accept the terms and polices.</label>
+                    <br />
+                    <input type="submit" value="SIGN UP" class="submitBtn">
+                </form>
+                <div id="display">
+                    <i class="fa fa-spinner"></i> Signing up...</div>
+                <hr / style="width:70%; opacity:0.5; size:0.5px">
+            </div>
+        </div>
+       
+        <div class="footer">
+            <p class="footerr">@COPYRIGHTS-2022- Lofty Team. All Rights Reserved.</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

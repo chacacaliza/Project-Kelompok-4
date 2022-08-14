@@ -1,0 +1,233 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    text-align: center;
+}
+.header{
+    margin: 0px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #414144;
+    padding-top: 50px;
+    border-bottom: 2px solid rgb(212, 122, 20);
+}
+.head{
+    margin: 0px;
+    padding: 0px;
+    color: aliceblue;
+    display: inline-block;
+}
+.halfHead{
+    color: rgb(227, 126, 10);
+}
+.fa-renren{
+    color: rgb(227, 126, 10);
+}
+
+form{
+    text-align:left;
+    margin: 0px;
+    padding: 2px 20px 2px 15px;
+}
+.signUpForm{
+    width: 40%;
+    margin: 0px auto;
+    background-color: #22252A;
+    border-radius: 8px;
+}
+.signUpHeading{
+    margin-top: 0px;
+    background-color: #454955;
+    padding: 10px;
+    color: white;;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    font-size: 150%;
+}
+.text{
+    color: #f7fbfe;
+    font-size: 80%;
+}
+.input{
+    background: none;
+    border: none;
+    background-color: #8d8e93;
+    padding: 10px;
+    margin: 8px auto;
+    width: 97%;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    transition: 1s;
+}
+.input::placeholder{
+    color: #82858E;
+}
+.inputfocus{
+    background-color: #454955;
+    border: none;
+    border-bottom: 1px solid rgb(255, 196, 0);
+    transition: 0.5s;
+}
+.inputfocus::placeholder{
+    color: #454955;
+}
+.agreement{
+    color: #828282;
+    font-size: 80%;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+.submitBtn {
+    background: none;
+    border: none;
+    background-color: rgb(56, 164, 231);
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 30%;
+    transition: 1s;
+    cursor: pointer;
+}
+.submitBtn:hover {
+    background-color: #454955;
+}
+.acc{
+    color: #828282;
+    font-size: 80%;
+}
+.acc:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.loginbtn{
+    padding: 10px;
+    width: 90%;
+    margin: 0px auto 20px; 
+    background: none;
+    border: none;
+    background-color: rgb(56, 164, 231);
+    color: white;
+    border-radius: 5px;
+    transition: 1s;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    outline: none;
+}
+.loginbtn:hover{
+    background-color: #454955;
+}
+.error{
+    float: right;
+    color: rgb(231, 96, 96);
+    display: none;
+    cursor: pointer;
+}
+.error:hover{
+    text-decoration: underline;
+}
+#display,#display1{
+    color: rgb(255, 174, 0);
+    letter-spacing: 1px;
+    display: none;
+}
+#display1{
+    margin-bottom: 50px;
+    padding: 20px;
+}
+#error2{
+    background-color: rgb(250, 125, 125);
+    width: 80%;
+    padding: 10px;
+    margin: 5px auto 10px;
+    border-radius: 10px;
+    color: rgb(102, 5, 5);
+    display: none;
+}
+
+.heading1{
+    color: 	#82858E;
+    font-size: 250%;
+    margin: 20px auto 5px;
+    letter-spacing: 1px;
+    background-color: #22252A;
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+}
+.panelHeading{
+    color: rgb(87, 206, 87);
+    margin: 0px;
+    padding: 10px;
+    border: 1px solid aliceblue;
+    width: 30%;
+    margin: 0px auto;
+}
+.footerr{
+    border-top: 3px solid rgb(128, 132, 128);
+    padding: 20px;
+    text-align: center;
+    margin: 0px;
+    color: rgb(189, 185, 185);
+    background-color: #414144;
+    padding-top: 20px;
+}
+@media only screen and (max-width: 600px) {
+    .signUpForm{
+        width: 90%;
+    }
+    .submitBtn{
+        width: 40%;
+    }
+    .heading1{
+        width: 80%;
+        font-size: 150%;
+    }
+    .heading2{
+        font-size: 120%;
+    }
+    .input{
+        width: 95%;
+    }
+    .acc{
+        font-size: 70%;
+    }
+    .panels{
+        width: 60%;
+    }
+    #error2{
+        font-size: 85%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .header{
+        font-size: 80%;
+    }
+    .headd{
+        margin-bottom: 10px;
+        padding: 0px;
+    }
+    .footer{
+        font-size: 95%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .head{
+        font-size: 190%;;
+    }
+    .headd{
+        font-size: 120%;
+    }
+    .footer{
+        font-size: 70%;
+    }
+    
+}
